@@ -1,0 +1,717 @@
+
+  body {
+    margin: 10px;
+    padding: 10px;
+    background-color: black;
+    background-image: url(Images/background-img.jpg);
+    background-attachment: fixed;
+  }
+  
+  header {
+  
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+    position: fixed;
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.484);
+  }
+  
+  .logo {
+    margin-left: 50px;
+    color: #c770f0;
+    
+
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-right: 50px;
+    font-size: large;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #c770f0;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-links li a:hover::after {
+    transform: scaleX(1);
+  }
+  /* Hide the link that should open and close the topnav on small screens */
+  .nav-links .icon {
+    display: none;
+  }
+  
+    
+  
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .nav-links a:not(:first-child) {display: none;}
+  .nav-links a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .nav-links.responsive {position: relative;}
+  .nav-links.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav-links.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/* background image */
+  /* .background-image{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  } */
+
+/* Home section  */
+.home{
+    color: white;
+    margin-left: 100px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.intro{
+    justify-content: center;
+    font-size:x-large;
+    text-align: center;
+    margin-left: 100px;
+    
+}
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+
+
+.name{
+    color: #c770f0;
+}
+  
+.home img{
+    height: 400px;
+    width: 550px;
+    margin-right: 150px;
+
+}
+
+/* type writer annimation  */
+
+.typewrite{
+    color:#c770f0; 
+    text-decoration: none;
+}
+
+.about{
+  
+  color: white;
+  margin-top: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  
+}
+
+.about-intro{
+  text-align: center;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.about-intro{
+  text-align: justify;
+  margin-left: 10vb;
+  padding: 10px;
+  margin-right: 10px;
+
+}
+.about-span{
+  color: #c770f0;
+
+}
+
+.about-img{
+  margin-top: 50px;
+  margin-right: 150px;
+ 
+}
+
+.find-me {
+  text-align: center;
+  color: white;
+  margin-top: 200px;
+  font-size: x-large;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.social-media a {
+  height: 20px;
+  width: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  margin-right: 40px; /* Add a margin-right for gap */
+}
+
+.social-media a:last-child {
+  margin-right: 0; /* Remove margin-right for the last link */
+}
+
+.social-media a:hover {
+  color: gray;
+}
+
+/* footer section  */
+footer {
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 110px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row; 
+  /* align-items: center; */
+  /* justify-content: center; */
+  justify-content: space-between;
+}
+.footer-center{
+  text-align: center;
+  margin-left: 200px;
+}
+.footer-left,
+.footer-right {
+  flex: 1;
+  text-align: center; /* Add text-align: center */
+}
+
+.footer-left span,
+.footer-right a {
+ 
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  color: gray;
+}
+
+
+/* about page  */
+
+.about-me{
+  text-align: left;
+  color: white;
+  margin-left: 100px;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.about-me h1{
+  text-align: center;
+  font-size: xx-large;
+}
+
+.about-me p{
+  justify-content: center;
+  text-align: justify;
+  font-size: x-large;
+}
+
+.about-me img{
+  height: 400px;
+  width: 550px;
+  margin-right: 150px;
+}
+
+
+.hobbies li{
+
+  list-style: none; /* Remove the default dot line */
+  margin-bottom: 10px; /* Increase the vertical gap */
+}
+ .hobbies li a {
+  margin-left: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: large;
+  
+ }
+
+ .quote{
+  margin-top: 20px;
+  font-size: larger;
+  text-align: center;
+  color: #c770f0;
+  justify-content: center;
+  margin-left: 100px !important;
+ }
+
+
+ .quote-name{
+  text-align: right !important;
+  color: white;
+  font-size: larger;
+  margin-right: 100px !important;
+ }
+
+ .skills{
+  margin-top: 150px;
+  font-size: x-large;
+  color: white;
+  text-align: center;
+  justify-content: center;
+ }
+
+
+
+ .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
+  grid-gap: 10px;
+  height: 70vh;
+  margin-left: 10vh;
+}
+
+.box {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 2px solid #c770f0;
+  box-sizing: border-box;
+  width: 90%;
+  height: 80%;
+  transition: transform 0.3s ease;
+  
+}
+
+.box:hover{
+  
+  transform: scale(1.1);
+}
+
+
+.box img {
+  width: 50%;
+  height: 50%;
+  transform: translateY(50%);
+  background-color: transparent;
+}
+
+
+
+.tools{
+  margin-top: 150px;
+  font-size: x-large;
+  color: white;
+  text-align: center;
+  justify-content: center;
+ }
+
+ 
+.tools  h1{
+ 
+  text-align: center !important;
+ 
+ }
+
+
+ .container-tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
+  grid-gap: 10px;
+  height: 35vh;
+  margin-left: 10vh;
+}
+
+.box-tools {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 2px solid #c770f0;
+  box-sizing: border-box;
+  width: 90%;
+  height: 80%;
+  transition: transform 0.3s ease; 
+}
+
+
+.box-tools:hover{
+  
+  transform: scale(1.1);
+}
+
+
+
+
+.box-tools img {
+  height: 50%;
+  width: 50%;
+  margin: 0 auto;
+  transform: translateY(50%);
+}
+
+.resume{
+
+  margin-top: 100px;
+  background-color: transparent;
+}
+
+.download-button {
+  margin-top: 10vb;
+  display: inline-block;
+  text-align: center;
+  margin-left: 45%;
+  margin-right: 50%;
+  width: 100px;
+  padding: 10px 20px;
+  background-color: #c770f0;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.download-button:hover {
+  background-color: #a556ca9c;
+}
+
+.pdf{
+
+  margin-top: 10vb;
+ margin-left: 30vb;
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+.blog{
+  color: white;
+  margin-top: 20vb;
+  margin-left: 30vw;
+}
+
+
+/* contact-me */
+
+.contact-me{
+  margin-top: 100px;
+  color: #fff;
+  margin-left: 45vw;
+  font-size: 35px;
+}
+
+/* contact form  start*/
+ .main-form{
+    display: flex;
+    flex-direction: column;
+   
+  }
+  form {
+    background-color: transparent(0, 0, 0, 0);
+    padding: 50px;
+    margin: 20px auto;
+
+    border: 4px solid #a514aa;
+    border-radius: 50px;
+    text-align: left;
+
+  }
+  .content-form{
+    font-size: 20px;
+    margin: 10px;
+    color: white;
+  }
+.content-form label{
+  color: #c770f0;
+}
+  .name{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+  }
+
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=tel], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
+
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #a514aa;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=reset] {
+    width: 100%;
+    background-color: #a514aa;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=reset]:hover {
+    background-color:#571259;
+    
+  }
+  input[type=submit]:hover {
+    background-color:#571259;
+    
+  }
+
+  textarea[type = text]{
+    width: 100%;
+    height: 20vh;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+/* conatct form end */
+
+/* blogging page  */
+
+.card{
+  background-color: white;
+  padding: 20px;
+}
+
+.blogs{
+  color: black;
+  background-color: #ccc;
+  padding: 2px;
+  margin-top: 100px;
+}
+
+.blogs{
+  text-align: center;
+ 
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+
+  
+#testimonials {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+
+  margin-top: 80px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  color: #444;
+  flex-basis: calc(33.33% - 20px);
+  max-width: 300px;
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonial-header img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 10px;
+}
+
+.testimonial-header h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.testimonial-content p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.testimonial-content h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.testimonial-card:hover{
+  transform: scale(1.1);
+}
+
+/* Style the "scroll to top" button */
+#scrollToTopBtn {
+    
+  position: fixed; /* Set the position to fixed */
+  top: 50%; /* Align to the vertical center of the viewport */
+  right: -20px; /* Move the button off-screen to the right */
+  transform: translateY(-50%); /* Center align the button vertically */
+  z-index: 9999; /* Set a high z-index value */
+  border: none; /* Remove the border */
+  outline: none; /* Remove the outline */
+  background-color: transparent; /* Set the background color to transparent */
+  cursor: pointer; /* Change the cursor to a pointer */
+}
+
