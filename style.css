@@ -1,4 +1,6 @@
-
+html{
+  scroll-behavior: smooth;
+}
   body {
     margin: 0px;
     padding: 10px;
@@ -90,7 +92,46 @@
     display: block;
     text-align: left;
   }
+  
 }
+
+
+/* check button  */
+
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+@media(max-width : 350px){
+  .checkbtn{
+    display: block;
+  }
+  
+ .nav-links li a{
+  display: none;
+
+ }
+  #check:checked ~ ul{
+    left: 0;
+  }
+
+  .checkbtn{
+    display: block;
+  }
+
+
+}
+
+
 /* background image */
   /* .background-image{
     z-index: -1;
@@ -113,9 +154,10 @@
     justify-content: center;
     font-size:x-large;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 80px;
     
 }
+ 
 
 .wave {
     animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
@@ -419,14 +461,129 @@ footer {
   transform: translateY(50%);
 }
 
+.project-title{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+
+.flip-card-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin-right: 30px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 768px) {
+  .flip-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .flip-card {
+    width: 100%;
+  }
+}
+
+
+.demo-title{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 150px;
+}
+
+.demo-video{
+  margin-left: 10;
+}
+
+.Video-container{
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+
+}
+
+.Video-container iframe{
+  margin-left: 80px;
+  gap: 10px;
+  margin-right: 20px;
+
+}
+
+.left-video, .right-video{
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  font-weight:600;
+}
+
+
 .resume{
 
-  margin-top: 100px;
+  margin-top: 150px;
   background-color: transparent;
+  color: white;
+  
+}
+
+
+
+.resume-title{
+  color: white;
+  text-align: center;
+  font-size: 60px;
 }
 
 .download-button {
-  margin-top: 10vb;
+  margin-top: 20px;
   display: inline-block;
   text-align: center;
   margin-left: 45%;
@@ -465,7 +622,7 @@ footer {
 .contact-me{
   margin-top: 100px;
   color: #fff;
-  margin-left: 45vw;
+  margin-left: 40vw;
   font-size: 35px;
 }
 
@@ -644,15 +801,20 @@ footer {
   }
 }
 
-
+.testimonials-title{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+margin-top: 150px;
+}
   
-#testimonials {
+#testimonials-id {
   display: flex;
   justify-content: space-between;
   padding: 50px;
-
   margin-top: 80px;
 }
+
 
 .testimonial-card {
   background-color: #fff;
