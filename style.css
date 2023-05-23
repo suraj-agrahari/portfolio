@@ -1,6 +1,8 @@
 html{
   scroll-behavior: smooth;
 }
+
+
   body {
     margin: 0px;
     padding: 10px;
@@ -148,6 +150,7 @@ html{
     flex-direction: row;
     justify-content: space-between;
 }
+
 
 
 .intro{
@@ -548,6 +551,8 @@ footer {
   display: flex;
   flex-direction: row;
   margin-top: 100px;
+  color: #fff;
+  text-align: center;
 
 }
 
