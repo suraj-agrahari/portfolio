@@ -81,6 +81,8 @@
     .checkbtn{
       display: block;
     }
+
+
     ul{
       position: fixed;
       width: 100%;
@@ -111,6 +113,8 @@
       display: block;
     }
   }
+
+  
   section{
     background-size: cover;
     height: calc(100vh - 80px);
