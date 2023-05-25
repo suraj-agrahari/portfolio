@@ -79,12 +79,11 @@ scrollToTopBtn.addEventListener("click", function() {
 
 // resposnive navbar
 
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
-  var x = document.getElementById("myTopnav");
+  var x = document.getElementById("nav-links");
   if (x.className === "nav-links") {
     x.className += " responsive";
   } else {
-    x.className = "nav-links";
+    x.className = "navlinks";
   }
 }
